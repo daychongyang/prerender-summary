@@ -4,6 +4,10 @@
 
 `SEO`, （Search Engine Optimization）搜索引擎优化:利用搜索引擎的规则提高网站在有关搜索引擎内的自然排名。
 
+## SEO 方案
+- 服务端渲染(SSR)
+- 预渲染(Prerender)
+
 ## SEO 常见注意事项
 
 1. 网站结构优化
