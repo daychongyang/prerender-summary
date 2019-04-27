@@ -7,6 +7,7 @@
 ## SEO 方案
 - 服务端渲染(SSR)
 - 预渲染(Prerender)
+- 区分 user-agent
 
 ## SEO 常见注意事项
 
@@ -20,8 +21,9 @@
 2. 网站代码优化
   - 合理设计 `HTML`元信息, `<title />`(特定网页的主题) , `<meta description/>` (总括性描述), `<meta keywords/>` (网站关键字),
   - 语义化书写HTML代码
-    - `<a/>` 标签加上 `title` 属性说明, 使用 `el="nofllow"`告知爬虫 不去爬取外部链接 
+    - `<a/>` 标签加上 `title` 属性说明, 使用 `rel="nofllow"`告知爬虫不去爬取外部链接 
       ```html
+        <!-- <meta name="robots" content="nofollow" /> -->
         <a href="https://www.baidu.com" title="百度搜索">去搜搜</a>
       ```
     - 正文标题使用 `<h1/>` 标签
@@ -31,7 +33,7 @@
       ```
     - `<caption />` 标签定义表格标题
       ```html
-        <table border='1'>
+        <table>
             <caption>标题</caption>
             <tbody>
                 <tr>
@@ -57,9 +59,8 @@
     - 将多个样式文件或脚本文件合并为一个文件
     - 图片懒加载
   - 控制资源文件优先级(样式优先)
-  - 浏览器缓存
-  - 减少重排(Reflow)
-  - 减少 DOM 操作
-  - 使用 CDN
-  - 启用GZIP 压缩
+  - 减少 DOM 操作,减少重排(Reflow)
+  - 使用 CDN, 浏览器缓存, 启用GZIP 压缩
   - 伪静态设置(.html)
+
+## 预渲染
