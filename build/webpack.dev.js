@@ -1,15 +1,18 @@
+const webpack = require('webpack')
 const merge = require('webpack-merge')
 const webpackBaseConfig = require('./webpack.base')
-const webpack = require('webpack')
 const chalk = require('chalk')
 const address = require('address')
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 const notifier = require('node-notifier')
-const { HOST, PORT } = process.env
+const { HOST = '0.0.0.0', PORT = 9528 } = process.env
 
 module.exports = merge(webpackBaseConfig, {
 	mode: 'development',
-	devtool: 'eval',
+	devtool: 'cheap-module-eval-source-map',
+	output: {
+		publicPath: '/'
+	},
 	devServer: {
 		host: HOST,
 		port: PORT,
@@ -23,43 +26,6 @@ module.exports = merge(webpackBaseConfig, {
 		},
 		historyApiFallback: true,
 		clientLogLevel: 'warning'
-	},
-	module: {
-		rules: [
-			{
-				test: /\.(js|jsx)$/,
-				exclude: /node_modules/,
-				use: ['babel-loader', 'eslint-loader']
-			},
-			{
-				test: /\.html$/,
-				use: [{ loader: 'html-loader' }]
-			},
-			{
-				test: /\.css$/,
-				use: ['style-loader', 'css-loader', 'postcss-loader']
-			},
-			{
-				test: /\.styl$/,
-				use: ['style-loader', 'css-loader', 'postcss-loader', 'stylus-loader']
-			},
-			{
-				test: /\.svg$/,
-				use: 'file-loader'
-			},
-			{ test: /\.(eot|woff|ttf)$/, loader: 'file-loader' },
-			{
-				test: /\.(jpe?g|png|gif)$/,
-				use: [
-					{
-						loader: 'url-loader',
-						options: {
-							limit: 10 * 1024
-						}
-					}
-				]
-			}
-		]
 	},
 	plugins: [
 		new FriendlyErrorsWebpackPlugin({

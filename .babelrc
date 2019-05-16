@@ -1,19 +1,43 @@
 {
-  "plugins": [
-    "@babel/syntax-dynamic-import",
-    "@babel/plugin-proposal-export-default-from",
-    [
-      "@babel/plugin-proposal-decorators",
-      {
-        "legacy": true
-      }
-    ],
-    [
-      "@babel/plugin-proposal-class-properties",
-      {
-        "loose": true
-      }
-    ]
-  ],
-  "presets": ["@babel/preset-env", "@babel/preset-react"]
+	"presets": [
+		[
+			"@babel/preset-env",
+			{
+				"useBuiltIns": "usage"
+			}
+		],
+		"@babel/preset-react",
+		"@babel/preset-typescript"
+	],
+	"plugins": [
+		[
+			"import",
+			{
+				"libraryName": "antd",
+				"style": true
+			}
+		],
+		[
+			"@babel/plugin-proposal-decorators",
+			{
+				"decoratorsBeforeExport": true
+			}
+		],
+		[
+			"@babel/plugin-proposal-class-properties",
+			{
+				"loose": true
+			}
+		],
+		"@babel/plugin-syntax-dynamic-import",
+		[
+			"babel-plugin-styled-components",
+			{
+				"displayName": true,
+				"fileName": true,
+				"pure": true,
+				"minify": true
+			}
+		]
+	]
 }

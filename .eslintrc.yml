@@ -3,15 +3,15 @@ env:
   es6: true
   node: true
 extends:
-  - 'eslint:recommended'
-  - 'plugin:react/recommended'
+  - 'prettier'
+  - 'prettier/@typescript-eslint'
 settings:
   react:
     version: detect
 globals:
   Atomics: readonly
   SharedArrayBuffer: readonly
-parser: 'babel-eslint'
+parser: '@typescript-eslint/parser'
 parserOptions:
   ecmaFeatures:
     jsx: true
@@ -19,10 +19,11 @@ parserOptions:
   sourceType: module
 plugins:
   - react
+  - '@typescript-eslint'
 rules:
   'no-console': 'off'
   indent:
-    - error
+    - warn
     - tab
   linebreak-style: 'off'
   quotes:
