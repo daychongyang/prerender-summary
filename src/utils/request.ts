@@ -1,15 +1,16 @@
-import axios, { AxiosRequestConfig } from 'axios'
+import Axios, { AxiosRequestConfig, AxiosInstance } from 'axios'
 import { message } from 'antd'
 import { HTTPCodes } from './http-codes'
+import baseURL from './base-url'
 export { AxiosRequestConfig } from 'axios'
 
-const Service = axios.create({
-	baseURL: 'localhost:9009',
+const axios = Axios.create({
+	baseURL,
 	timeout: 30000,
 	headers: { 'X-Custom-Header': 'foobar', withCredentials: true }
 })
 
-Service.interceptors.request.use(
+axios.interceptors.request.use(
 	config => {
 		return config
 	},
@@ -18,7 +19,7 @@ Service.interceptors.request.use(
 	}
 )
 
-Service.interceptors.response.use(
+axios.interceptors.response.use(
 	response => {
 		return response
 	},
@@ -30,11 +31,6 @@ Service.interceptors.response.use(
 	}
 )
 
-export const Request = async (payload: AxiosRequestConfig) => {
-	const env = process.env.BUILD_ENV
-	try {
-		const { data } = await Service.request(payload)
-	} catch (e) {
-		message.error(e)
-	}
-}
+export const GET = (url: string) => () => ''
+
+export const POST = (url: string) => () => ''

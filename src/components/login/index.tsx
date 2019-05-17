@@ -2,7 +2,7 @@ import React, { Component, MouseEvent } from 'react'
 import { Form, Input, Button, Checkbox } from 'antd'
 import styled from 'styled-components'
 import { FormComponentProps } from 'antd/lib/form/Form'
-import Api from './api'
+
 const FormItem = Form.Item
 
 const Wrapper = styled.div`
@@ -33,9 +33,7 @@ interface Props extends FormComponentProps {
 class LoginForm extends Component<Props> {
 	private handleLogin = (e: MouseEvent) => {
 		e.preventDefault()
-		this.props.form.validateFields(async (errs, values) => {
-			Api.auth(values)
-		})
+		this.props.form.validateFields(async (errs, values) => {})
 	}
 
 	public render() {

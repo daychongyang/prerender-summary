@@ -42,10 +42,10 @@ export default function Introduction() {
 		<Wrapper>
 			<img src={logo} alt="" />
 			<Slogan>
-				Don`t let anyone rush you <br />
-				with their timelines!
+				Prerender Summary
+				<br />
 			</Slogan>
-			<SubSlogan>Be patient.</SubSlogan>
+			<SubSlogan>...</SubSlogan>
 			<Shadow />
 		</Wrapper>
 	)
