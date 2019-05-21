@@ -1,0 +1,77 @@
+{
+  "config": {
+    "title": "Prerender Summary",
+    "description": "My awesome app using docz",
+    "menu": [],
+    "version": "1.0.0",
+    "repository": null,
+    "native": false,
+    "codeSandbox": true,
+    "themeConfig": {},
+    "separator": "-"
+  },
+  "props": [
+    {
+      "key": "src/pages/home/index.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "home",
+          "methods": [],
+          "props": {}
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "key": "docs/summary.mdx",
+      "value": {
+        "name": "Prerendering Summary",
+        "route": "/",
+        "id": "e4b1550b2a9c4a0c1e6fbed468dfc519",
+        "filepath": "docs/summary.mdx",
+        "link": "",
+        "slug": "docs-summary",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "prerendering-summary",
+            "depth": 1,
+            "value": "Prerendering Summary"
+          },
+          {
+            "slug": "术语",
+            "depth": 2,
+            "value": "术语"
+          },
+          {
+            "slug": "前端渲染方式",
+            "depth": 2,
+            "value": "前端渲染方式"
+          },
+          {
+            "slug": "什么是预渲染",
+            "depth": 2,
+            "value": "什么是预渲染?"
+          },
+          {
+            "slug": "为什么使用预渲染",
+            "depth": 2,
+            "value": "为什么使用预渲染?"
+          },
+          {
+            "slug": "预渲染使用场景",
+            "depth": 2,
+            "value": "预渲染使用场景"
+          },
+          {
+            "slug": "如何实现预渲染",
+            "depth": 2,
+            "value": "如何实现预渲染"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import logo from 'assets/logo.svg'
+import logo from 'assets/logo.png'
 
 const Wrapper = styled.div`
 	display: flex;
@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 `
 
 const Slogan = styled.div`
-	margin-top: 60px;
+	margin-top: 30px;
 	font-weight: 500;
 	font-size: 22px;
 	line-height: 1.5;
@@ -40,12 +40,11 @@ const SubSlogan = styled.div`
 export default function Introduction() {
 	return (
 		<Wrapper>
-			<img src={logo} alt="" />
+			<img src={logo} alt="" className="logo" />
 			<Slogan>
-				Prerender Summary
-				<br />
+				Deer. <br />
 			</Slogan>
-			<SubSlogan>...</SubSlogan>
+			{/* <SubSlogan>Deer.</SubSlogan> */}
 			<Shadow />
 		</Wrapper>
 	)

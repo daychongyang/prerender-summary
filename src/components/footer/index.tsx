@@ -10,5 +10,5 @@ const Footer = styled.footer`
 `
 
 export default function() {
-	return <Footer>Day© 2019 版权所有</Footer>
+	return <Footer>App-Boilerplate© 2018 版权所有</Footer>
 }

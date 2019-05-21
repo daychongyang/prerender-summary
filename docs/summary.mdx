@@ -1,0 +1,43 @@
+---
+name: Prerendering Summary
+route: /
+---
+
+# Prerendering Summary
+
+## 术语
+
+- CSR: 客户端渲染
+- Prerendering: 预渲染
+- SSR: 服务端渲染
+- Rehydration: 同构
+
+* TTFB:Time to First Byte(首字节时间)
+* FP:First Paint(首次绘制)
+* FCP:First Contentful Paint(首次内容绘制)
+* TTI:Time To Interactive(可交互时间)
+
+## 前端渲染方式
+
+|          |   CSR    | Prerendering |       SSR        |          Rehydration           |
+| :------: | :------: | :----------: | :--------------: | :----------------------------: |
+|   TTFB   |          |              |                  |                                |
+|    FP    |    慢    |      快      |        慢        |               快               |
+|   FCP    |    慢    |      快      |        快        |       复杂度高、性能瓶颈       |
+|   FMP    |    慢    |      慢      |        快        |       复杂度高、性能瓶颈       |
+|   TTI    |  不友好  |     友好     |       友好       |       复杂度高、性能瓶颈       |
+|   SEO    |  不友好  |     友好     |       友好       |       复杂度高、性能瓶颈       |
+| 数据共享 | 内存共享 |   数据共享   | SEO 友好、FMP 快 | SEO 友好、FMP 快、数据内存共享 |
+
+## 什么是预渲染?
+
+## 为什么使用预渲染?
+
+SPA (Single-Page-Application) 首屏渲染慢, 白屏时间过长问题、SEO 等问题
+
+- 更好的 SEO
+- 更快的内容到达时间(部分页面)
+
+## 预渲染使用场景
+
+## 如何实现预渲染

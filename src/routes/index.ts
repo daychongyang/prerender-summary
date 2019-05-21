@@ -1,9 +1,7 @@
 import { lazy } from 'react'
+import basic from './basic'
+import exceptions from './exceptions'
 
-export default [
-	{
-		name: '登录',
-		path: '/',
-		component: lazy(() => import(/* webpackChunkName: 'login'*/ 'pages/home'))
-	}
-]
+export * from './renderRoutes'
+
+export default [...basic, ...exceptions]
