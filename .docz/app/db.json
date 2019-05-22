@@ -1,6 +1,6 @@
 {
   "config": {
-    "title": "Prerender Summary",
+    "title": "Prerendering Summary",
     "description": "My awesome app using docz",
     "menu": [],
     "version": "1.0.0",
@@ -41,34 +41,54 @@
             "value": "Prerendering Summary"
           },
           {
-            "slug": "术语",
+            "slug": "一、前端渲染方式",
             "depth": 2,
-            "value": "术语"
+            "value": "一、前端渲染方式"
           },
           {
-            "slug": "前端渲染方式",
+            "slug": "二、什么是预渲染",
             "depth": 2,
-            "value": "前端渲染方式"
+            "value": "二、什么是预渲染?"
           },
           {
-            "slug": "什么是预渲染",
+            "slug": "三、为什么使用预渲染",
             "depth": 2,
-            "value": "什么是预渲染?"
+            "value": "三、为什么使用预渲染?"
           },
           {
-            "slug": "为什么使用预渲染",
+            "slug": "四、预渲染使用场景及特定场景对比",
             "depth": 2,
-            "value": "为什么使用预渲染?"
+            "value": "四、预渲染使用场景及特定场景对比"
           },
           {
-            "slug": "预渲染使用场景",
-            "depth": 2,
-            "value": "预渲染使用场景"
+            "slug": "41-性能指标",
+            "depth": 3,
+            "value": "4.1 性能指标"
           },
           {
-            "slug": "如何实现预渲染",
+            "slug": "42-特定页面特定场景下的对比",
+            "depth": 3,
+            "value": "4.2  特定 页面 特定 场景下的对比"
+          },
+          {
+            "slug": "五、如何实现预渲染",
             "depth": 2,
-            "value": "如何实现预渲染"
+            "value": "五、如何实现预渲染"
+          },
+          {
+            "slug": "六、问题",
+            "depth": 2,
+            "value": "六、问题"
+          },
+          {
+            "slug": "七、参考",
+            "depth": 2,
+            "value": "七、参考"
+          },
+          {
+            "slug": "八、工具",
+            "depth": 2,
+            "value": "八、工具"
           }
         ]
       }
