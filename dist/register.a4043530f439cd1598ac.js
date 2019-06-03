@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{417:function(n,e,r){"use strict";r.r(e),r.d(e,"default",function(){return o});var t=r(0);class o extends t.Component{render(){return"REGISTER"}}}}]);
